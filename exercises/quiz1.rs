@@ -13,8 +13,6 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
-
 // Put your function here!
 // fn calculate_price_of_apples {
 
@@ -30,4 +28,13 @@ fn verify_test() {
     assert_eq!(80, price2);
     assert_eq!(41, price3);
     assert_eq!(65, price4);
+}
+
+fn calculate_price_of_apples(amount: u32) -> u32 {
+    let cost = 2;
+    let discounted_cost = 1;
+    let discountable_amount = 40;
+    let final_cost = if amount > discountable_amount { discounted_cost } else { cost};
+
+    amount * final_cost
 }
